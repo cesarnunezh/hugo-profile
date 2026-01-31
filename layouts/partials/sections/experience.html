@@ -21,7 +21,7 @@
                                     data-bs-target='#pills-{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}'
                                     aria-controls='{{ replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print .company "-" $firstJobDate)) | lower }}'
                                 >
-                                    {{ .company }}
+                                    {{ .tabName | default .company }}
                                 </div>
                             </li>
                         {{ end }}
@@ -60,8 +60,10 @@
                                                 {{ end }}
                                                 
                                                 {{ if eq $jobIdx 0 }}
-                                                    <small>-</small>
-                                                    <a href="{{ $companyUrl }}" target="_blank">{{ $company }}</a>
+                                                    <div class="text-muted small mt-1">
+                                                    <a href="{{ $companyUrl }}" target="_blank">{{ .displayName | default $company }}</a>
+                                                    {{ with $job.location }} · {{ . }}{{ end }}
+                                                    </div>
                                                 {{ end }}
                                             </div>
                                             <div class="d-block">
@@ -106,6 +108,33 @@
                                         </div>
                                         <div class="pb-2 pb-3">
                                             {{ $job.content | markdownify}}
+                                            {{ with $job.tags }}
+                                            {{ $collapseId := printf "stack-%s-%d" (replaceRE "-+" "-" (replaceRE "[^a-zA-Z0-9]" "-" (print $company "-" $firstJobDate))) $jobIdx | lower }}
+
+                                            <div class="mt-2">
+                                                <a
+                                                class="btn btn-sm btn-link px-0 text-decoration-none"
+                                                style="color: var(--text-color);"
+                                                data-bs-toggle="collapse"
+                                                href="#{{ $collapseId }}"
+                                                role="button"
+                                                aria-expanded="false"
+                                                aria-controls="{{ $collapseId }}"
+                                                >
+                                                {{ $job.tagsTitle | default "Tech stack" }}
+                                                <span class="ms-1">+</span>
+                                                </a>
+
+                                                <div class="collapse mt-2" id="{{ $collapseId }}">
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    {{ range . }}
+                                                    <span class="badge rounded-pill tech-badge">{{ . }}</span>
+                                                    {{ end }}
+                                                </div>
+                                                </div>
+                                            </div>
+                                            {{ end }}
+
                                         </div>
                                     </div>
                                 {{ end }}

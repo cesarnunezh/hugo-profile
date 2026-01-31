@@ -97,6 +97,15 @@
                     </li>
                     {{ end }}
 
+                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
+                            aria-label="projects">
+                            {{ .Site.Params.projects.title | default "Projects" }}
+                        </a>
+                    </li>
+                    {{ end }}
+
                     {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
@@ -115,32 +124,6 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
-                            aria-label="projects">
-                            {{ .Site.Params.projects.title | default "Projects" }}
-                        </a>
-                    </li>
-                    {{ end }}
-
-                    {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
-                            aria-label="achievements">
-                            {{ .Site.Params.achievements.title | default "Achievements" }}
-                        </a>
-                    </li>
-                    {{ end }}
-
-                    {{ if and (.Site.Params.contact.enable | default false) (not (.Site.Params.navbar.menus.disableContact | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
-                            aria-label="contact">
-                            {{ .Site.Params.contact.title | default "Contact" }}
-                        </a>
-                    </li>
-                    {{ end }}
 
                     {{ if and .Site.Menus.main (.Site.Params.navbar.enableSeparator | default false) }}
                         <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
