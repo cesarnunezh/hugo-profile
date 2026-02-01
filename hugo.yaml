@@ -200,6 +200,17 @@ params:
           - icon: fab fa-github
             url: https://github.com/cesarnunezh/OpenPeru
 
+      - title: Odisha’s Grievance Redressal System
+        content: Built an asynchronous ETL pipeline for Odisha’s Janasunani grievance redressal system, automating ingestion and validation of 1M+ citizen complaints.
+        image: /images/projects/janasunani.png
+        badges:
+          - "Webscraping"
+          - "Docker"
+          - "Pydantic"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/cesarnunezh/OpenPeru
+
       - title: Poverty Prediction using Satellital Imagery
         content: Using machine learning and satellite data to classify households by poverty status and improve scalable poverty measurement.
         image: /images/projects/poverty_pred.png

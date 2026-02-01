@@ -2,11 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolios on César Núñez - Portfolio</title>
-    <link>https://hugo-profile.netlify.app/portfolio/</link>
+    <link>http://localhost:1313/portfolio/</link>
     <description>Recent content in Portfolios on César Núñez - Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://hugo-profile.netlify.app/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 16:43:10 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project</title>
+      <link>http://localhost:1313/portfolio/project/</link>
+      <pubDate>Sat, 31 Jan 2026 16:43:10 -0600</pubDate>
+      <guid>http://localhost:1313/portfolio/project/</guid>
+      <description>Project </description>
+    </item>
   </channel>
 </rss>
