@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 31 Jan 2026 16:43:10 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project</title>
-      <link>http://localhost:1313/portfolio/project/</link>
+      <title>Open Perú</title>
+      <link>http://localhost:1313/portfolio/open_peru/</link>
       <pubDate>Sat, 31 Jan 2026 16:43:10 -0600</pubDate>
-      <guid>http://localhost:1313/portfolio/project/</guid>
-      <description>Project </description>
+      <guid>http://localhost:1313/portfolio/open_peru/</guid>
+      <description>Civic Tech Platform for Legislative Transparency Overview OpenPerú is an open-source civic-tech platform that collects, processes, and structures public data from the Peruvian Congress to improve political transparency, accountability, and public access to legislative information. The project builds an end-to-end data pipeline that transforms fragmented and poorly structured government data into clean, queryable datasets and analytical tools.&#xA;Problem Legislative information in Peru is:&#xA;Highly fragmented across multiple web portals Published in inconsistent formats (HTML tables, PDFs, scanned documents) Difficult to track longitudinally (bills, committees, voting records, memberships) This makes it hard for researchers, journalists, and citizens to analyze congressional behavior or hold representatives accountable.</description>
     </item>
     <item>
       <title>My First Post</title>

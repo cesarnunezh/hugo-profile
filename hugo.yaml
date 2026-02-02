@@ -28,18 +28,18 @@ markup:
     renderer:
       unsafe: true
 
-# Menus:
-#   main:
+Menus:
+  main:
     # - identifier: gallery
     #   name: Portfolio
     #   title: Portfolio
     #   url: /gallery
     #   weight: 1
-    # - identifier: portfolio
-    #   name: Portfolio
-    #   title: Portfolio
-    #   url: /portfolio
-    #   weight: 1
+    - identifier: portfolio
+      name: Portfolio
+      title: Portfolio
+      url: /portfolio
+      weight: 1
     # - identifier: gallery
     #   name: Gallery
     #   title: Blog posts
@@ -149,8 +149,8 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://drive.google.com/file/d/1Dw7pPCjGA3lEF-37RPRuWFQbxeXj-XcA/view?usp=sharing"
-      download: true
+      url: "/files/CV_CNH_202601.pdf"
+      download: False
       newPage: true
     socialLinks:
       fontAwesomeIcons:
